@@ -14,6 +14,8 @@ class ViewController: UIViewController,
 {
     @IBOutlet weak var imagePicked: UIImageView!
     
+    
+    // Allows the iPhone Camera to be accessed
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
@@ -24,6 +26,8 @@ class ViewController: UIViewController,
         }
     }
 
+    
+    // Allows the photo to be saved to the iPhone Camera Roll (still need to implement actual save button)
     @IBAction func openPhotoLibraryButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
